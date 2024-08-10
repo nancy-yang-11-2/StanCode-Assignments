@@ -29,8 +29,8 @@ def move_ball(mouse):
         pause(FRAME_RATE)
         if graphics.ball.x <= 0 or graphics.ball.x + graphics.ball.width >= graphics.window.width:
             graphics.dx = -graphics.dx
-        # if graphics.ball.y <= 0:
-        #     graphics.dy = -graphics.dy
+        if graphics.ball.y <= 0:
+            graphics.dy = -graphics.dy
         if graphics.ball.y + graphics.ball.height >= graphics.window.height:
             graphics.decrease_lives()
             graphics.reset_ball()
